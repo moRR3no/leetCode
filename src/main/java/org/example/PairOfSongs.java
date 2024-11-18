@@ -1,5 +1,7 @@
 package main.java.org.example;
 
+// https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/description/
+
 public class PairOfSongs {
     public int numPairsDivisibleBy60(int[] time) {
 
