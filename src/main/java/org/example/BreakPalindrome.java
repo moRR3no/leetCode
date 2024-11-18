@@ -7,24 +7,19 @@ public class BreakPalindrome {
 
     public String breakPalindrome(String palindrome) {
         int palindromeLength = palindrome.length();
-
         if (palindromeLength <= 1) {
             return "";
         }
         char[] letters = palindrome.toCharArray();
-        boolean flagA = true;
+        int itrLength = (palindromeLength / 2) - 1;
 
-        for (int i = 0; i < palindromeLength; i++) {
+        for (int i = 0; i <= itrLength; i++) {
             if (letters[i] != 'a') {
                 letters[i] = 'a';
-                flagA = false;
-                break;
+                return String.valueOf(letters);
             }
         }
-        if (flagA) {
-            letters[palindromeLength - 1] = 'b';
-        }
-
+        letters[palindromeLength - 1] = 'b';
         return String.valueOf(letters);
     }
 }
