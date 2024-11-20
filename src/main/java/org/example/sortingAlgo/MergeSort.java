@@ -6,7 +6,7 @@ public class MergeSort {
     public void mergeSort(int[] arr) {
         int arrLength = arr.length;
 
-        // jeśli dana tabela ma mniej niz dwa elementy (0 , 1) to nic nie rob (return)
+        // jeśli dana tabela ma mniej niz dwa elementy (0) to nic nie rob (return)
         if (arrLength < 2) {
             return;
         }
@@ -31,7 +31,7 @@ public class MergeSort {
 
         // dojdziemy do tego stanu gdzie bedą jednoelementowe tabele - na tym kończy sie divide step
 
-        // teraz conquer
+        // teraz conquer - param: concat tabela, subtabela, subtabela
         merge(arr, leftHalf, rightHalf);
 
     }
@@ -46,12 +46,12 @@ public class MergeSort {
         // looping till we are out of elements in both arrays
         // we r checking first element of leftHalf with first element of rightHalf and then fit in the right condition
         // add it to merge table, increment in merge table and then go to check the next position of subarray
-        while (i < leftSize && j < rightSize) {
-            if (leftHalf[i] <= rightHalf[j]) {
+        while (i < leftSize && j < rightSize) {  // loop till we are run of elements in one of the tables
+            if (leftHalf[i] <= rightHalf[j]) {  // comparing in both tables which is lower and then populate to concat table
                 intArray[k] = leftHalf[i];
                 i++;
             } else {
-                intArray[k] = rightHalf[j];
+                intArray[k] = rightHalf[j]; // same here, populate to concat table i first comparison doesn't fit
                 j++;
             }
             k++;
@@ -72,6 +72,4 @@ public class MergeSort {
             k++;
         }
     }
-
-
 }
