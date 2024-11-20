@@ -1,4 +1,4 @@
-package main.java.org.example;
+package main.java.org.example.sortingAlgo;
 
 //sorting algorithm
 
@@ -15,11 +15,9 @@ public class SelectionSorting {
                     minIndex = j;
                 }
             }
-
             int temp = arr[i];
             arr[i] = arr[minIndex];
             arr[minIndex] = temp;
         }
     }
-
 }
