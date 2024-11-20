@@ -1,5 +1,7 @@
 package main.java.org.example.sortingAlgo;
 
+
+// sorting playground
 public class Sort {
 
     private static void merge(int[] concatArr, int[] leftHalf, int[] rightHalf) {
